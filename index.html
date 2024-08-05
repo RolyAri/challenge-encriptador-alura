@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="container">
+        <div class="container__encriptador">
+            <div><img class="container__encriptador__logo" src="assets/Logo.png" alt=""></div>
+            
+            <div class="container__encriptador_content">
+                <textarea name="cadena" id="texto" class="container__encriptador__input" placeholder="Ingrese el texto aquí" onkeyup="sinValor()"></textarea>
+                <div>
+                    <span class="container__encriptador_content__aviso">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2"/></svg>
+                        Solo letras minúsculas y sin acentos</span>
+                    <div class="container__encriptador__botones">
+                        <button class="button__encriptar" onclick="encriptar()">Encriptar</button>
+                        <button class="button__desencriptar" onclick="desencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container__resultado_encriptado" id="resultado">
+            <div class="container__resultado_encriptado__img">
+                <img src="assets/Muñeco.png" alt="">
+            </div> 
+            <div class="container__resultado_encriptado__mensaje">
+                <span>Ningun mensaje fue encontrado</span>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>               
+        </div>
+    </main>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

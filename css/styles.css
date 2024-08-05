@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
+
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
+    --light-blue-500: #757FB2;
+
+    --gray-100: #CED4DA;
+    --gray-200: #ADB5BD;
+    --gray-300: #868E96;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+
+    --font-inter: "Inter", sans-serif;
+}
+
+body {
+    background-color: var(--light-blue-100);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.container__encriptador {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container__encriptador__logo {
+    margin: 2.5rem 0 0 2.5rem;
+}
+
+.container__encriptador_content {
+    height: calc(100% - 2.5rem);
+    margin: 5rem 0 0 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container__encriptador__input{
+    background: none;
+    color: var(--dark-blue-300);
+    font-family: var(--font-inter);
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    width: 100%;
+    resize: none;
+    height: 70%;
+}
+
+.container__encriptador__input::placeholder {
+    color: var(--dark-blue-300);
+    font-family: var(--font-inter);
+    font-size: 2rem;
+}
+
+.container__encriptador_content__aviso {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-inter);
+    font-size: 0.75rem;
+}
+
+.container__encriptador__botones {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 4.5rem;
+}
+.container__encriptador__botones .button__encriptar {
+    width: 100%;
+    height: 67px;
+    border-radius: 24px;
+    background-color: var(--dark-blue-300);
+    border: 1px solid var(--dark-blue-300);
+    color: white;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.container__encriptador__botones .button__desencriptar {
+    width: 100%;
+    height: 67px;
+    border-radius: 24px;
+    background-color: #D8DFE8;
+    border: 1px solid var(--dark-blue-300);
+    color: var(--dark-blue-300);
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.container__encriptador_content__aviso {
+    color: var(--gray-400);
+}
+
+.container__resultado_encriptado {
+    width: 30%;
+    margin: 2.5rem 2.5rem 2.5rem 5rem;
+    background-color: white;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultado__encriptado {
+    width: 30%;
+    margin: 2.5rem 2.5rem 2.5rem 5rem;
+    background-color: white;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-wrap: break-word;
+}
+
+.resultado__encriptado span {
+    margin: 2rem;
+    color: var(--gray-400);
+}
+
+.container__resultado_encriptado .container__resultado_encriptado__img {
+    text-align: center;
+}
+
+.container__resultado_encriptado .container__resultado_encriptado__mensaje {
+    width: 60%;
+    text-align: center;
+}
+
+.container__resultado_encriptado .container__resultado_encriptado__mensaje span {
+    text-align: center;
+    margin-top: 2rem;
+    font-family: var(--font-inter);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--gray-500);
+}
+
+.container__resultado_encriptado .container__resultado_encriptado__mensaje p {
+    text-align: center;
+    margin-top: 1rem;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    color: var(--gray-400);
+}
+
+.resultado {
+    font-family: var(--font-inter);
+    font-size: 1.5rem;
+}
+
+.button__copiar {
+    margin: 0 2rem 2rem 2rem;
+    height: 67px;
+    border-radius: 24px;
+    background: none;
+    border: 1px solid var(--dark-blue-300);
+    color: var(--dark-blue-300);
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    cursor: pointer;
+}
+/* .button__copiar {
+    width: 100%;
+    height: 67px;
+    border-radius: 24px;
+    background: none;
+    border: 1px solid var(--dark-blue-300);
+    color: var(--dark-blue-300);
+    font-family: var(--font-inter);
+    font-size: 1rem;
+} */
+
+@media (max-width: 850px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+
+    .container__encriptador {
+        width: 100%;
+        min-height: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    .container__encriptador__input{
+        min-height: 80%;
+        height: auto;
+        resize: vertical;
+    }
+
+    .container__encriptador__logo {
+        margin: 2.5rem 0 0 -2.5rem;
+    }
+    
+    .container__encriptador_content {
+        height: 100%;
+        margin: 7.25rem 0 2.5rem 0;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between; */
+    }
+
+    .container__encriptador__botones {
+        margin: 0;
+        margin-top: 1rem;
+        display: flex;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .container__resultado_encriptado {
+        width: 100%;
+        height: auto;
+        margin: 0 2.5rem 2.5rem;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    }
+    .container__resultado_encriptado__img {
+        width: 100%;
+        display: none;
+    }
+    .container__resultado_encriptado__mensaje {
+        margin: 1rem 0;
+    }
+    .resultado__encriptado {
+        width: 100%;
+        height: auto;
+        margin: 0 2.5rem 2.5rem;
+        overflow-wrap: break-word;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    }
+
+    .resultado__encriptado span {
+        max-width: 100%;
+    }
+}
